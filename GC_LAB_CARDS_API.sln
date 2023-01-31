@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GC_LAB_CARDS_API", "GC_LAB_CARDS_API\GC_LAB_CARDS_API.csproj", "{4531D5B4-387D-4E90-BD8F-C4435C9CBE6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4531D5B4-387D-4E90-BD8F-C4435C9CBE6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4531D5B4-387D-4E90-BD8F-C4435C9CBE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4531D5B4-387D-4E90-BD8F-C4435C9CBE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4531D5B4-387D-4E90-BD8F-C4435C9CBE6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFF3A1A8-0429-41E6-9645-56D7AFDF3454}
+	EndGlobalSection
+EndGlobal

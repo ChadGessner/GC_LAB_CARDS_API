@@ -1,0 +1,92 @@
+﻿@model IEnumerable<GC_LAB_CARDS_API.Models.CardsVM>
+@using Microsoft.AspNetCore.WebUtilities
+@{
+    ViewData["Title"] = "Draw";
+    
+}
+
+<h1>Draw</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<h1 id="currentUrl" >Some Stuff</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.suit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsChecked)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <form id="form" method="post" asp-controller="Cards" asp-action="Draw">
+            @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.code)
+                            <input  hidden asp-for="@item.code">
+                        </td>
+                        <td>
+                            <img height="100px" width="100px" src="@item.image">
+                            <input  hidden asp-for="@item.image">    
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.value)
+                            <input  hidden asp-for="@item.value">
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.suit)
+                            <input  hidden asp-for="@item.suit">
+                        </td>
+                        <td>
+                            @*<input asp-for=@(item.IsChecked)/>*@
+                            <select  asp-for=@item.IsChecked>
+                                <option>true</option>
+                                <option>false</option>
+                            </select>
+                            @*@Html.CheckBoxFor( modelItem => item.IsChecked)*@
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>
+                    </tr>
+            }
+        <button type="submit" asp-route-id="@Html.ViewContext.HttpContext.Request.Path.ToString().Split('/')[3]">Submit</button>
+        </form>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+
+        
+        //onSubmit = () => {
+        //    let deckId = document.URL.split('/')[0];
+            
+        //}
+        $(document).ready(function () {
+            const document.getElementById('form').reset();
+            document.getElementById('currentUrl').innerHTML = "some more differen";
+            message.innerHTML = "some other stuff";
+            onSubmit();
+        });      
+                                    
+    </script>
+                                
+}

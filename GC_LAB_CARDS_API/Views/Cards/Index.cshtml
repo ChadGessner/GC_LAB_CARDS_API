@@ -1,0 +1,42 @@
+﻿@model GC_LAB_CARDS_API.Models.DeckAPI
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div>
+    <h4>DeckAPI</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.success)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.success)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.deck_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.deck_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shuffled)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shuffled)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.remaining)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.remaining)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Draw", "Draw", new { id=Model.deck_id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
